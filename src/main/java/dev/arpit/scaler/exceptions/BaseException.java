@@ -4,7 +4,7 @@ import dev.arpit.scaler.dtos.ResponseCode;
 import lombok.Getter;
 
 @Getter
-public class BaseException extends Exception {
+public abstract class BaseException extends Exception {
   private final ResponseCode code;
   private final String displayMessage;
 
