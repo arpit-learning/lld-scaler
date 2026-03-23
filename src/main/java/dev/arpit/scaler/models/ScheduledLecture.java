@@ -16,9 +16,12 @@ public class ScheduledLecture extends BaseModel{
   @ManyToOne(optional = false)
   @JoinColumn(name = "lecture_id", referencedColumnName = "id")
   private Lecture lecture;
-  @ManyToOne
+  @ManyToOne(optional = false)
   @JoinColumn(name = "batch_id", referencedColumnName = "id")
   private Batch batch;
+  @ManyToOne(optional = false)
+  @JoinColumn(name = "instructor_id", referencedColumnName = "id")
+  private Instructor instructor;
   @Column(nullable = false)
   private LocalDateTime startTime;
   @Column(nullable = false)

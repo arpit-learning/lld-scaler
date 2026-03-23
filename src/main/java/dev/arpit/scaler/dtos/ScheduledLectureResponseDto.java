@@ -11,6 +11,7 @@ public class ScheduledLectureResponseDto {
   private long id;
   private String name;
   private LectureResponseDto lecture;
+  private InstructorResponseDto instructor;
   private BatchResponseDto batch;
   private LocalDateTime startTime;
   private LocalDateTime endTime;
