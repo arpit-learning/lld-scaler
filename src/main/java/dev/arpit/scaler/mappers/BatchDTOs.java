@@ -7,7 +7,8 @@ public class BatchDTOs {
   public static BatchResponseDto getBatchResponseDto(Batch batch) {
     return new BatchResponseDto(
         batch.getId(),
-        batch.getName()
+        batch.getName(),
+        batch.getSchedule().toString()
     );
   }
 }

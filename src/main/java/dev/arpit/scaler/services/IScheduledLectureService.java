@@ -1,13 +1,10 @@
-package com.example.scaler.services;
+package dev.arpit.scaler.services;
 
-import com.example.scaler.exceptions.InvalidLearnerException;
-import com.example.scaler.models.ScheduledLecture;
-import org.springframework.stereotype.Service;
+import dev.arpit.scaler.models.Learner;
+import dev.arpit.scaler.models.ScheduledLecture;
 
 import java.util.List;
 
-@Service
-public interface LearnerService {
-
-    public List<ScheduledLecture> fetchTimeline(long learnerId) throws InvalidLearnerException;
+public interface IScheduledLectureService {
+  List<ScheduledLecture> fetchTimeline(Learner learner);
 }

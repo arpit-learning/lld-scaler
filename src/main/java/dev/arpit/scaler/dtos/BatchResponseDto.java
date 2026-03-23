@@ -8,4 +8,5 @@ import lombok.Data;
 public class BatchResponseDto {
   private long id;
   private String name;
+  private String schedule;
 }
