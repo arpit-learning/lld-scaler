@@ -7,4 +7,5 @@ import org.springframework.http.ResponseEntity;
 public interface IScheduledLectureController {
   ResponseEntity<@NonNull ResponseDto<FetchTimelineResponseDto>> fetchTimeline(FetchTimelineRequestDto requestDto);
   ResponseEntity<@NonNull ResponseDto<RescheduleScheduledLectureResponseDto>> rescheduleScheduledLecture(RescheduleScheduledLectureRequestDto requestDto);
+  ResponseEntity<@NonNull ResponseDto<ScheduleLecturesResponseDto>> scheduleLectures(ScheduleLectureRequestDto requestDto);
 }

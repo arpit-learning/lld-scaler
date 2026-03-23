@@ -2,6 +2,7 @@ package dev.arpit.scaler.mappers;
 
 import dev.arpit.scaler.dtos.FetchTimelineResponseDto;
 import dev.arpit.scaler.dtos.RescheduleScheduledLectureResponseDto;
+import dev.arpit.scaler.dtos.ScheduleLecturesResponseDto;
 import dev.arpit.scaler.dtos.ScheduledLectureResponseDto;
 import dev.arpit.scaler.models.ScheduledLecture;
 
@@ -37,6 +38,12 @@ public class ScheduledLectureDTOs {
 
   public static RescheduleScheduledLectureResponseDto getRescheduleScheduledLectureResponseDto(List<ScheduledLecture> scheduledLectures) {
     return new RescheduleScheduledLectureResponseDto(
+        ScheduledLectureDTOs.getScheduledLecturesResponseDto(scheduledLectures)
+    );
+  }
+
+  public static ScheduleLecturesResponseDto getScheduleLecturesResponseDto(List<ScheduledLecture> scheduledLectures) {
+    return new ScheduleLecturesResponseDto(
         ScheduledLectureDTOs.getScheduledLecturesResponseDto(scheduledLectures)
     );
   }
