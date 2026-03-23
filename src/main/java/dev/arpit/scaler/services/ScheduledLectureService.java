@@ -105,11 +105,6 @@ public class ScheduledLectureService implements IScheduledLectureService {
     return scheduledLectureRepository.saveAll(scheduledLectures);
   }
 
-  @Override
-  public ScheduledLecture save (ScheduledLecture scheduledLecture) {
-    return scheduledLectureRepository.save(scheduledLecture);
-  }
-
   private LocalDateTime getNextStartTime(Schedule schedule) {
     LocalDateTime datetime = LocalDateTime.now();
 
